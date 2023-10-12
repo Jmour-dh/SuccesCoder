@@ -3,4 +3,6 @@ export default {
   while: "#fff",
   darkGrey: "#333",
   lightGrey: "#ccc",
+  dimGray: "#696969",
+  lightOrange:"moccasin",
 };

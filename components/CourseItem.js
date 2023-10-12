@@ -22,7 +22,7 @@ const CourseItem = (props) => {
         </View>
         <View style={styles.courseContainerDetails}>
           <Text style={styles.courseTitle}> {props.title} </Text>
-          <Text style={styles.coursePrice}> {props.price.toFixed(2)}</Text>
+          <Text style={styles.coursePrice}> {props.price.toFixed(2)}€</Text>
         </View>
         <View style={styles.iconsContainer}>
           <TouchableOpacity onPress={props.viewDetails}>
