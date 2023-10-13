@@ -1,12 +1,13 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { CoursesNavigator } from "./CoursesStackNav";
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
+import { DrawerNavigator } from './DrawerNav';
 
 const AppNav = () => {
-  return (
-    <NavigationContainer>
-      <CoursesNavigator />
-    </NavigationContainer>
-  );
-};
+    return (
+        <NavigationContainer>
+            <DrawerNavigator />
+        </NavigationContainer>
+    )
+}
+
 export default AppNav;

@@ -2,17 +2,16 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { HeaderButtons, Item } from "react-navigation-header-buttons";
 import CustomHeaderIcon from "../components/CustomHeaderIcon";
-import Landing from "../screens/Landing";
-import CourseInfos from "../screens/CourseInfo";
+import Cart from "../screens/Cart";
 import globalStyles from "../styles/globalStyles";
 
-const CoursesStackNavigator = createStackNavigator();
+const CartStackNavigator = createStackNavigator();
 
-export const CoursesNavigator = () => {
+export const CartNavigator = () => {
   return (
-    <CoursesStackNavigator.Navigator
+    <CartStackNavigator.Navigator
       screenOptions={({ navigation }) => ({
-        
+       
         headerStyle: { backgroundColor: globalStyles.green },
         headerTitleStyle: { fontWeight: "bold" },
         headerTintColor: globalStyles.white,
@@ -36,18 +35,11 @@ export const CoursesNavigator = () => {
         ),
       })}
     >
-      <CoursesStackNavigator.Screen
-        name="Landing"
-        component={Landing}
-        options={{ title: "Catalogue" }}
+      <CartStackNavigator.Screen
+        name="Cart"
+        component={Cart}
+        options={{ title: "Panier" }}
       />
-      <CoursesStackNavigator.Screen
-        name="Details"
-        component={CourseInfos}
-        options={({ route }) => ({
-          title: route.params.title,
-        })}
-      />
-    </CoursesStackNavigator.Navigator>
+    </CartStackNavigator.Navigator>
   );
 };
